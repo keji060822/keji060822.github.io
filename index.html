@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="柯毅成的科研个人主页：3D NAND、FeFET、极端温度可靠性与器件建模。" />
+    <title>柯毅成 — 存储器可靠性</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23e8eef5'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' fill='%23007aff'%3EYK%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top">柯毅成</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a class="nav-link active" href="#top">Home</a>
+          <a class="nav-link" href="#publications">Publications</a>
+          <a class="nav-link" id="cvNav" href="assets/ke-yicheng-cv-cn.pdf" target="_blank" rel="noreferrer">CV</a>
+          <button class="nav-btn" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="top">
+      <section class="hero">
+        <div class="hero-flex">
+          <div class="avatar" aria-label="Yicheng Ke portrait placeholder">YK</div>
+          <div>
+            <h1 class="name" id="profileName">柯毅成</h1>
+            <div class="tagline" id="heroKicker">微电子科学与技术 · 中山大学</div>
+            <p id="heroIntro">我是一名微电子科学与技术本科生，关注 3D NAND 与 FeFET 器件在极端温度、统计变异和阵列级应用中的可靠性。</p>
+            <p class="muted" id="heroContact">如果你想交流，欢迎给我发邮件： <a id="introEmail" href="mailto:keych@mail2.sysu.edu.cn">keych@mail2.sysu.edu.cn</a>。</p>
+            <p class="muted" id="interestLead">目前，我主要关注这些问题：</p>
+            <ul id="questionGrid"></ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="hairline"></div>
+
+      <section id="projects">
+        <h2 class="section-title" id="projectsTitle">Selected Projects</h2>
+        <div class="showcase-controls">
+          <label for="showcaseSelect" id="showcaseLabel">Select a project</label>
+          <select id="showcaseSelect" aria-label="Select a featured project">
+            <option value="nand-prediction">EDL · Threshold-voltage prediction</option>
+            <option value="nand-compensation">TED · Temperature compensation</option>
+            <option value="fefet-tcam">TDMR · FeFET TCAM reliability</option>
+            <option value="ipfa">IPFA · Cross-temperature characterization</option>
+          </select>
+        </div>
+        <article class="card showcase-card" aria-live="polite">
+          <div class="showcase-media" id="showcaseMedia">
+            <div class="desktop-stage" id="desktopStage" data-mode="edl">
+              <div class="desktop-menubar">
+                <span class="traffic-lights"><i></i><i></i><i></i></span>
+                <span class="desktop-app-name">Research Desk</span>
+                <span class="desktop-time">09:41</span>
+              </div>
+              <div class="desktop-body">
+                <aside class="desktop-sidebar">
+                  <span class="desktop-avatar">YK</span>
+                  <strong id="desktopProjectCode">EDL</strong>
+                  <span id="desktopProjectType">Journal study</span>
+                  <span class="desktop-sidebar-line"></span>
+                  <span>Overview</span>
+                  <span>Measurements</span>
+                  <span>Mechanism</span>
+                </aside>
+                <div class="desktop-main">
+                  <div class="desktop-window-head">
+                    <span id="desktopWindowTitle">Mean / Sigma model</span>
+                    <span class="window-dot">•••</span>
+                  </div>
+                  <div class="metric-grid">
+                    <div><span>Temperature</span><strong id="desktopTemp">−55 → 125°C</strong></div>
+                    <div><span>Average RMSE</span><strong id="desktopMetric">↓ 66.9%</strong></div>
+                    <div><span>States</span><strong id="desktopStates">P1 — P7</strong></div>
+                  </div>
+                  <div class="chart-panel">
+                    <div class="chart-labels"><span id="desktopChartLabel">VTH distribution</span><span id="desktopChartHint">mechanism-informed</span></div>
+                    <svg viewBox="0 0 620 220" role="img" aria-label="Animated threshold-voltage distribution plot">
+                      <defs>
+                        <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                          <stop offset="0%" stop-color="#007aff" stop-opacity=".28" />
+                          <stop offset="100%" stop-color="#007aff" stop-opacity="0" />
+                        </linearGradient>
+                      </defs>
+                      <path class="chart-grid" d="M0 42H620M0 94H620M0 146H620M0 198H620" />
+                      <g class="chart-edl">
+                        <path class="chart-area" d="M0 192 C32 188 34 168 70 168 S106 118 138 124 S170 66 202 89 S241 150 269 132 S301 52 332 75 S370 151 399 110 S432 31 463 59 S493 132 524 118 S564 77 620 42 L620 220 L0 220Z" />
+                        <path class="chart-line" d="M0 192 C32 188 34 168 70 168 S106 118 138 124 S170 66 202 89 S241 150 269 132 S301 52 332 75 S370 151 399 110 S432 31 463 59 S493 132 524 118 S564 77 620 42" />
+                        <path class="chart-line chart-line-second" d="M0 202 C40 200 48 187 81 185 S118 154 148 157 S184 99 213 116 S253 174 282 153 S313 91 344 107 S378 180 408 145 S447 70 476 91 S509 159 542 146 S585 111 620 89" />
+                      </g>
+                      <g class="chart-ted">
+                        <path class="chart-area chart-area-ted" d="M0 187 C38 183 56 162 92 166 S132 121 166 132 S205 93 240 103 S277 83 314 89 S359 75 391 95 S431 123 461 108 S508 104 548 63 S587 51 620 42 L620 220 L0 220Z" />
+                        <path class="chart-line chart-line-ted-on" d="M0 187 C38 183 56 162 92 166 S132 121 166 132 S205 93 240 103 S277 83 314 89 S359 75 391 95 S431 123 461 108 S508 104 548 63 S587 51 620 42" />
+                        <path class="chart-line chart-line-second chart-line-ted-off" d="M0 202 C38 199 58 180 95 184 S130 149 167 158 S207 127 242 139 S282 119 317 130 S359 115 391 133 S431 157 461 149 S506 138 548 108 S588 95 620 84" />
+                        <path class="chart-divider" d="M420 30V210" />
+                      </g>
+                      <g class="chart-tdmr">
+                        <rect class="chart-bar" x="35" y="157" width="52" height="43" rx="5" />
+                        <rect class="chart-bar" x="120" y="130" width="52" height="70" rx="5" />
+                        <rect class="chart-bar" x="205" y="94" width="52" height="106" rx="5" />
+                        <rect class="chart-bar" x="290" y="70" width="52" height="130" rx="5" />
+                        <rect class="chart-bar" x="375" y="49" width="52" height="151" rx="5" />
+                        <rect class="chart-bar" x="460" y="32" width="52" height="168" rx="5" />
+                        <path class="chart-line chart-line-tdmr" d="M61 148 C141 123 227 87 316 62 S478 21 548 18" />
+                        <circle class="chart-dot" cx="61" cy="148" r="6" /><circle class="chart-dot" cx="151" cy="119" r="6" /><circle class="chart-dot" cx="239" cy="84" r="6" /><circle class="chart-dot" cx="329" cy="58" r="6" /><circle class="chart-dot" cx="419" cy="42" r="6" /><circle class="chart-dot" cx="509" cy="26" r="6" />
+                      </g>
+                      <g class="chart-ipfa">
+                        <path class="chart-area chart-area-ipfa" d="M0 187 C45 185 77 171 113 172 S184 150 226 157 L327 157 C363 145 383 118 423 113 S484 88 529 82 S584 57 620 49 L620 220 L0 220Z" />
+                        <path class="chart-line chart-line-ipfa" d="M0 187 C45 185 77 171 113 172 S184 150 226 157 L327 157 C363 145 383 118 423 113 S484 88 529 82 S584 57 620 49" />
+                        <path class="chart-line chart-line-second chart-line-ipfa-second" d="M0 199 C45 198 77 191 113 191 S184 181 226 186 L327 186 C363 175 383 153 423 148 S484 128 529 122 S584 102 620 95" />
+                        <path class="chart-divider chart-divider-ipfa" d="M327 30V210" />
+                      </g>
+                    </svg>
+                    <div class="chart-axis"><span id="desktopAxisLeft">cold</span><span id="desktopAxisMid">program state</span><span id="desktopAxisRight">hot</span></div>
+                  </div>
+                  <div class="desktop-status"><span class="status-pulse"></span><span id="desktopStatus">Model ready · cross-temperature view</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3><span id="showcaseTitle">3D NAND threshold-voltage prediction</span> — <span id="showcaseYear">2026</span></h3>
+            <p class="muted" id="showcaseCopy">A mechanism-constrained model jointly predicts VTH mean and Sigma across extreme temperatures.</p>
+            <ul id="showcaseBullets"></ul>
+            <div class="links" id="showcaseLinks"></div>
+            <div class="tags" id="showcaseTags"></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="publications">
+        <h2 class="section-title" id="publicationsTitle">Recent Publications</h2>
+        <div class="pub-list" id="publicationList"></div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title" id="experienceTitle">Experience</h2>
+        <div class="timeline" id="experienceList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container small">
+        <span id="footerName">© 2026 柯毅成 / Yicheng Ke</span>
+        <span class="footer-links"><a id="footerEmail" href="mailto:keych@mail2.sysu.edu.cn">Email</a> · <a id="footerCv" href="assets/ke-yicheng-cv-cn.pdf" target="_blank" rel="noreferrer">CV</a></span>
+      </div>
+    </footer>
+
+    <script src="content.js"></script>
+    <script src="papers.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

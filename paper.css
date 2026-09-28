@@ -1,0 +1,269 @@
+.paper-nav {
+  gap: 22px;
+}
+
+.paper-nav .header-actions {
+  gap: 16px;
+}
+
+.back-link {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .04em;
+  transition: color .2s ease;
+}
+
+.back-link:hover,
+.paper-doi:hover {
+  color: var(--blue);
+}
+
+.paper-page {
+  padding: 90px 0 110px;
+}
+
+.paper-hero {
+  max-width: 960px;
+  padding-bottom: 62px;
+}
+
+.paper-kicker {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.paper-hero h1 {
+  max-width: 1000px;
+  margin-bottom: 26px;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -.06em;
+}
+
+.paper-authors {
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.paper-venue {
+  margin-bottom: 30px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.paper-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+}
+
+.paper-doi {
+  margin-left: 7px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  transition: color .2s ease;
+}
+
+.paper-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+  gap: 62px;
+  padding: 53px 0 68px;
+  border-top: 1px solid var(--line);
+}
+
+.paper-summary h2,
+.reader-heading h2 {
+  margin-bottom: 18px;
+  font-size: clamp(27px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -.055em;
+}
+
+.paper-abstract > p:last-child {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.paper-meta {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.paper-meta ul {
+  margin: 0 0 31px;
+  padding: 0;
+  list-style: none;
+}
+
+.paper-meta li {
+  padding: 13px 0 13px 20px;
+  border-top: 1px solid var(--line);
+  position: relative;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.paper-meta li::before {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  content: "";
+  background: var(--accent-deep);
+}
+
+.paper-meta li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.paper-keywords .meta-label {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.paper-keywords .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.paper-keywords .tag-list span {
+  padding: 6px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.paper-reader-section {
+  padding-top: 58px;
+  border-top: 1px solid var(--line);
+}
+
+.reader-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 26px;
+}
+
+.reader-heading p:last-child {
+  max-width: 390px;
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.paper-reader {
+  min-height: 700px;
+  padding: 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.paper-reader iframe {
+  display: block;
+  width: 100%;
+  height: 900px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.reader-status {
+  min-height: 18px;
+  margin: 8px 4px 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.reader-status.is-error {
+  color: #b42318;
+}
+
+.paper-not-found {
+  min-height: 70vh;
+  padding: 150px 0;
+}
+
+.paper-not-found h1 {
+  max-width: 620px;
+  font-size: clamp(45px, 7vw, 80px);
+}
+
+.paper-not-found p:not(.paper-kicker) {
+  margin-bottom: 30px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .paper-shell {
+    width: min(100% - 32px, 1240px);
+  }
+
+  .paper-nav .brand-name {
+    display: none;
+  }
+
+  .paper-nav .header-actions {
+    gap: 10px;
+  }
+
+  .back-link {
+    display: none;
+  }
+
+  .paper-page {
+    padding-top: 60px;
+  }
+
+  .paper-summary {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .paper-meta {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .reader-heading {
+    display: block;
+  }
+
+  .reader-heading p:last-child {
+    margin-top: 15px;
+  }
+
+  .paper-reader {
+    padding: 4px;
+  }
+
+  .paper-reader iframe {
+    height: 680px;
+  }
+}

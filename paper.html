@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Paper details and full-text reader for Yicheng Ke's research." />
+    <title>论文详情 · 柯毅成</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23131b2b'/%3E%3Cpath d='M17 43V21h6l18 14V21h6v22h-6L23 29v14z' fill='%23d8f45e'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="paper.css" />
+  </head>
+  <body>
+    <div class="page-shell paper-shell">
+      <header class="site-header paper-nav" aria-label="Site header">
+          <a class="brand" href="index.html#top" aria-label="Back to homepage">
+            <span class="brand-mark">YK</span>
+            <span class="brand-name">柯毅成 · Research notes</span>
+          </a>
+          <div class="header-actions">
+            <a class="back-link" href="index.html#publications" id="backLink">← 返回论文列表</a>
+            <a class="back-link" href="assets/ke-yicheng-cv-cn.pdf" id="paperCv" target="_blank" rel="noreferrer">CV</a>
+            <button class="text-button" id="langToggle" type="button" aria-label="Switch language">EN</button>
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Switch color theme"><span class="theme-icon" aria-hidden="true">◐</span></button>
+        </div>
+      </header>
+
+      <main id="paperPage" class="paper-page">
+        <section class="paper-hero section-reveal">
+          <p class="paper-kicker" id="paperKicker">Journal article · 2026</p>
+          <h1 id="paperTitle">Paper title</h1>
+          <p class="paper-authors" id="paperAuthors"></p>
+          <p class="paper-venue" id="paperVenue"></p>
+          <div class="paper-actions">
+            <a class="button button-primary" id="openPdf" href="#" target="_blank" rel="noreferrer">在新标签页打开 PDF <span>↗</span></a>
+            <a class="button button-quiet" id="downloadPdf" href="#" download>下载 PDF <span>↓</span></a>
+            <a class="paper-doi" id="paperDoi" href="#" target="_blank" rel="noreferrer">DOI ↗</a>
+          </div>
+        </section>
+
+        <section class="paper-summary section-reveal" aria-label="Paper summary">
+          <div class="paper-abstract">
+            <p class="section-index" id="abstractIndex">01 / Abstract</p>
+            <h2 id="abstractHeading">摘要</h2>
+            <p id="paperAbstract"></p>
+          </div>
+          <aside class="paper-meta">
+            <p class="section-index" id="highlightsIndex">02 / Highlights</p>
+            <h2 id="highlightsHeading">研究亮点</h2>
+            <ul id="paperHighlights"></ul>
+            <div class="paper-keywords">
+              <p class="meta-label" id="keywordsLabel">关键词</p>
+              <div id="paperKeywords" class="tag-list"></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="paper-reader-section section-reveal" aria-label="Full paper reader">
+          <div class="reader-heading">
+            <div>
+              <p class="section-index" id="readerIndex">03 / Full text</p>
+              <h2 id="readerHeading">完整阅读</h2>
+            </div>
+            <p id="readerHint">在页面内直接阅读完整论文；也可以打开或下载 PDF。</p>
+          </div>
+          <div class="paper-reader">
+            <iframe id="paperFrame" title="Full paper PDF" loading="lazy"></iframe>
+            <p class="reader-status" id="readerStatus" aria-live="polite"></p>
+          </div>
+        </section>
+      </main>
+
+      <div id="paperNotFound" class="paper-not-found" hidden>
+        <p class="paper-kicker">Paper not found</p>
+        <h1>找不到这篇论文</h1>
+        <p>请从主页的论文列表重新进入。</p>
+        <a class="button button-primary" href="index.html#publications">返回主页 <span>↗</span></a>
+      </div>
+    </div>
+
+    <script src="papers.js"></script>
+    <script src="paper-page.js"></script>
+  </body>
+</html>
