@@ -110,8 +110,9 @@
         title: "获奖经历",
         items: [
           { logo: "CUMCM", org: "高教杯全国大学生数学建模竞赛（CUMCM）", title: "省部级一等奖 · 队长", range: "2025.09" },
-          { logo: "IC", org: "第十届全国大学生集成电路创新创业大赛", title: "省部级二等奖", range: "2026.08" },
-          { logo: "HSC", org: "华数杯数学建模竞赛", title: "国家级一等奖", range: "2025.08" }
+          { logo: "IC", org: "第十届全国大学生集成电路创新创业大赛", title: "省部级二等奖 · 队长", range: "2026.08" },
+          { logo: "HSC", org: "2026 华数杯数学建模竞赛", title: "国家级一等奖 · 队长", range: "2026.08" },
+          { logo: "HSC", org: "2025 华数杯数学建模竞赛", title: "国家级二等奖 · 队长", range: "2025.08" }
         ]
       }
     ],
@@ -135,8 +136,9 @@
         title: "Awards",
         items: [
           { logo: "CUMCM", org: "2025 China Undergraduate Mathematical Contest in Modeling", title: "Provincial First Prize · Team Leader", range: "2025" },
-          { logo: "IC", org: "10th National Undergraduate Integrated Circuit Innovation & Entrepreneurship Competition", title: "Provincial / Ministerial Second Prize", range: "2026" },
-          { logo: "HSC", org: "2025 Huashu Cup Mathematical Modeling Competition", title: "Third Prize", range: "2025" }
+          { logo: "IC", org: "10th National Undergraduate Integrated Circuit Innovation & Entrepreneurship Competition", title: "Provincial / Ministerial Second Prize · Team Leader", range: "2026" },
+          { logo: "HSC", org: "2026 Huashu Cup Mathematical Modeling Competition", title: "National First Prize · Team Leader", range: "2026" },
+          { logo: "HSC", org: "2025 Huashu Cup Mathematical Modeling Competition", title: "National Second Prize · Team Leader", range: "2025" }
         ]
       }
     ]
