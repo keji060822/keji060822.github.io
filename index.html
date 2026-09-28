@@ -41,13 +41,8 @@
       <section id="projects">
         <h2 class="section-title" id="projectsTitle">Selected Projects</h2>
         <div class="showcase-controls">
-          <label for="showcaseSelect" id="showcaseLabel">Select a project</label>
-          <select id="showcaseSelect" aria-label="Select a featured project">
-            <option value="nand-prediction">EDL · Threshold-voltage prediction</option>
-            <option value="nand-compensation">TED · Temperature compensation</option>
-            <option value="fefet-tcam">TDMR · FeFET TCAM reliability</option>
-            <option value="ipfa">IPFA · Cross-temperature characterization</option>
-          </select>
+          <span id="showcaseLabel">Featured project</span>
+          <span class="showcase-fixed" id="showcaseFixed">EDL · Threshold-voltage prediction</span>
         </div>
         <article class="card showcase-card" aria-live="polite">
           <div class="showcase-media" id="showcaseMedia">
@@ -78,8 +73,8 @@
                     <div><span>States</span><strong id="desktopStates">P1 — P7</strong></div>
                   </div>
                   <div class="chart-panel">
-                    <div class="chart-labels"><span id="desktopChartLabel">VTH distribution</span><span id="desktopChartHint">mechanism-informed</span></div>
-                    <svg viewBox="0 0 620 220" role="img" aria-label="Animated threshold-voltage distribution plot">
+                    <div class="chart-labels"><span id="desktopChartLabel">ΔVTH / Δσ</span><span id="desktopChartHint">trap · barrier · mobility</span></div>
+                    <svg viewBox="0 0 620 220" role="img" aria-label="EDL mechanism-informed VTH mean and Sigma prediction plot">
                       <defs>
                         <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
                           <stop offset="0%" stop-color="#007aff" stop-opacity=".28" />

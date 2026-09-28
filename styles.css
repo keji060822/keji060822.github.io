@@ -199,15 +199,13 @@ section { padding: 36px 0 24px; }
   color: var(--subtle);
   font-size: 14px;
 }
-.showcase-controls label { font-weight: 600; }
-.showcase-controls select {
-  min-width: 265px;
-  padding: 8px 34px 8px 12px;
+.showcase-controls > span:first-child { font-weight: 600; }
+.showcase-fixed {
+  padding: 8px 12px;
   border: 1px solid var(--hairline);
   border-radius: 999px;
-  color: var(--ink);
-  background: #fff;
-  cursor: pointer;
+  color: var(--accent-ink);
+  background: rgba(0, 122, 255, .06);
   font-size: 14px;
 }
 .card {
@@ -451,7 +449,7 @@ footer .container { display: flex; justify-content: space-between; gap: 18px; }
   .hero-flex { align-items: flex-start; flex-direction: column; }
   .avatar { width: 88px; height: 88px; }
   .showcase-controls { align-items: flex-start; flex-direction: column; }
-  .showcase-controls select { width: 100%; }
+  .showcase-fixed { width: 100%; box-sizing: border-box; text-align: center; }
   .showcase-media { min-height: 300px; padding: 18px 8px; }
   .desktop-body { grid-template-columns: 98px minmax(0, 1fr); min-height: 250px; }
   .desktop-sidebar { padding: 13px 10px; font-size: 9px; }

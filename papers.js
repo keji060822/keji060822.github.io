@@ -12,24 +12,24 @@ window.paperDetails = {
       title: "极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测模型",
       authors: "柯毅成，董明辉，蔡琳琳，陈旺勇*",
       venue: "IEEE Electron Device Letters · 47(8) · 2026",
-      abstract: "本文提出一种机理约束的紧凑预测模型，用于描述 −55 °C 至 125 °C 范围内 3D NAND 各编程态阈值电压分布的均值与标准差。模型将俘获响应、电势垒调制和沟道迁移率变化拆解为可解释项，并在温度变化、非线性响应和外推场景下保持稳定预测。相较基线模型，平均 RMSE 降低 66.9%。",
+      abstract: "本文针对商用 232 层 TLC 电荷俘获 3D NAND，提出一种机理约束的紧凑预测模型，在 −55 °C 至 125 °C 范围内联合描述 P1–P7 阈值电压分布的均值与 Sigma。模型将陷阱响应、晶界势垒调制和沟道迁移率变化拆解为可解释项，并在高温编程/低温读取（HPLR）与低温编程/高温读取（LPHR）轨迹上进行全窗口拟合、受限窗口预测和留出区域外推。消融分析显示势垒项对 VTH 均值预测最关键，陷阱项对 Sigma 预测最关键；相较经验基线，极端温区平均预测 RMSE 降低 66.9%。",
       keywords: ["3D NAND", "阈值电压分布", "极端温度", "机理建模"],
       highlights: [
-        "联合预测每个编程态的 VTH 均值与 Sigma。",
-        "把陷阱、电势垒和迁移率效应显式写入模型。",
-        "平均 RMSE 相比基线降低 66.9%。"
+        "覆盖 P1–P7、−55 °C 至 125 °C 以及 HPLR / LPHR 两条温度轨迹。",
+        "势垒项主导 VTH 均值，陷阱项主导 Sigma 的预测误差。",
+        "受限窗口与留出区域外推下，平均预测 RMSE 相比经验基线降低 66.9%。"
       ]
     },
     en: {
       title: "A Mechanism-Informed Predictive Model for Mean and Sigma of 3D NAND Threshold-Voltage Distributions at Extreme Temperatures",
       authors: "Yicheng Ke, Minghui Dong, Linlin Cai, and Wangyong Chen*",
       venue: "IEEE Electron Device Letters · 47(8) · 2026",
-      abstract: "This work develops a mechanism-informed compact model for the mean and standard deviation of 3D NAND threshold-voltage distributions from −55 °C to 125 °C. Trap response, barrier modulation, and channel mobility are separated into interpretable terms so the model remains reliable across nonlinear and extrapolation regimes. The average RMSE is reduced by 66.9% versus the baseline.",
+      abstract: "This work presents a mechanism-informed compact model for commercial 232-layer TLC charge-trap 3D NAND, jointly predicting the mean and Sigma of P1–P7 threshold-voltage distributions from −55 °C to 125 °C. Trap response, grain-boundary barrier modulation, and channel mobility are separated into interpretable terms and evaluated along high-temperature-program/low-temperature-read (HPLR) and low-temperature-program/high-temperature-read (LPHR) trajectories using full-window fitting, restricted-window prediction, and held-out extrapolation. Ablation shows that the barrier term is most important for VTH mean prediction while the trap term dominates Sigma prediction; average prediction RMSE in extreme regions is reduced by 66.9% versus empirical baselines.",
       keywords: ["3D NAND", "VTH distribution", "Extreme temperature", "Physics-informed modeling"],
       highlights: [
-        "Jointly predicts VTH mean and Sigma for each state.",
-        "Makes trap, barrier, and mobility effects explicit.",
-        "Reduces average RMSE by 66.9% versus the baseline."
+        "Covers P1–P7, −55 °C to 125 °C, and both HPLR and LPHR trajectories.",
+        "The barrier term dominates VTH mean prediction; the trap term dominates Sigma prediction.",
+        "Restricted-window and held-out extrapolation reduce average extreme-region RMSE by 66.9% versus empirical baselines."
       ]
     }
   },

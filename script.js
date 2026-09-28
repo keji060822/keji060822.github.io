@@ -18,20 +18,20 @@
     "nand-prediction": {
       code: "EDL",
       visual: "edl",
-      chartLabel: { zh: "VTH 分布", en: "VTH distribution" },
-      axes: { zh: ["低温", "编程态", "高温"], en: ["cold", "program state", "hot"] },
-      type: { zh: "期刊研究", en: "Journal study" },
-      windowTitle: { zh: "均值 / Sigma 预测模型", en: "Mean / Sigma model" },
+      chartLabel: { zh: "ΔVTH / Δσ", en: "ΔVTH / Δσ" },
+      axes: { zh: ["−55°C", "拟合 → 外推", "125°C"], en: ["−55°C", "fit → extrapolate", "125°C"] },
+      type: { zh: "IEEE EDL · 期刊论文", en: "IEEE EDL · Journal paper" },
+      windowTitle: { zh: "均值 / Sigma 机理模型", en: "Mean / Sigma mechanism model" },
       temperature: "−55 → 125°C",
       metric: "↓ 66.9%",
       states: "P1 — P7",
-      hint: { zh: "机理约束预测", en: "mechanism-informed" },
-      status: { zh: "模型就绪 · 跨温度视图", en: "Model ready · cross-temperature view" },
-      title: { zh: "3D NAND 阈值电压分布的机理约束预测", en: "Mechanism-informed prediction of 3D NAND threshold distributions" },
+      hint: { zh: "陷阱 · 势垒 · 迁移率", en: "trap · barrier · mobility" },
+      status: { zh: "HPLR / LPHR · 模型就绪", en: "HPLR / LPHR · model ready" },
+      title: { zh: "极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测", en: "A Mechanism-Informed Predictive Model for Mean and Sigma of 3D NAND Threshold-Voltage Distributions at Extreme Temperatures" },
       year: "2026",
-      copy: { zh: "构建联合预测 VTH 均值与 Sigma 的机制约束模型，平均 RMSE 降低 66.9%。", en: "A mechanism-constrained model jointly predicts VTH mean and Sigma across extreme temperatures, lowering average RMSE by 66.9%." },
-      bullets: { zh: ["显式建模陷阱、电势垒与迁移率效应。", "覆盖极端温度、非线性与外推场景。"], en: ["Makes trap, barrier, and mobility effects explicit.", "Covers extreme-temperature, nonlinear, and extrapolation regimes."] },
-      tags: { zh: ["3D NAND", "VTH / Sigma", "可靠性"], en: ["3D NAND", "VTH / Sigma", "Reliability"] }
+      copy: { zh: "面向商用 232 层 TLC 3D NAND，联合预测 P1–P7 的 VTH 均值与 Sigma，覆盖高温编程/低温读取（HPLR）和低温编程/高温读取（LPHR）轨迹。", en: "For commercial 232-layer TLC 3D NAND, the model jointly predicts P1–P7 VTH mean and Sigma across high-temperature-program/low-temperature-read (HPLR) and low-temperature-program/high-temperature-read (LPHR) trajectories." },
+      bullets: { zh: ["显式分解并耦合陷阱、晶界势垒与沟道迁移率三项贡献。", "势垒项主导 VTH 均值、陷阱项主导 Sigma；极端温区平均预测 RMSE 降低 66.9%。"], en: ["Explicitly decomposes and couples trap, grain-boundary barrier, and channel-mobility contributions.", "The barrier term dominates VTH mean prediction while the trap term dominates Sigma; average extreme-region prediction RMSE drops by 66.9%."] },
+      tags: { zh: ["232 层 TLC", "HPLR / LPHR", "Trap · Barrier · Mobility"], en: ["232-layer TLC", "HPLR / LPHR", "Trap · Barrier · Mobility"] }
     },
     "nand-compensation": {
       code: "TED",
@@ -179,13 +179,13 @@
   function renderShowcase() {
     const meta = showcaseMeta[state.showcaseId];
     const zh = state.language === "zh";
-    $("showcaseSelect").value = state.showcaseId;
     $("desktopStage").dataset.mode = meta.visual;
     $("desktopChartLabel").textContent = meta.chartLabel[state.language];
     $("desktopAxisLeft").textContent = meta.axes[state.language][0];
     $("desktopAxisMid").textContent = meta.axes[state.language][1];
     $("desktopAxisRight").textContent = meta.axes[state.language][2];
-    $("showcaseLabel").textContent = zh ? "选择展示项目" : "Select a project";
+    $("showcaseLabel").textContent = zh ? "当前展示项目" : "Featured project";
+    $("showcaseFixed").textContent = zh ? "EDL · 阈值电压分布预测" : "EDL · Threshold-voltage prediction";
     $("desktopProjectCode").textContent = meta.code;
     $("desktopProjectType").textContent = meta.type[state.language];
     $("desktopWindowTitle").textContent = meta.windowTitle[state.language];
@@ -263,10 +263,6 @@
     renderLanguageButton();
   }
 
-  $("showcaseSelect").addEventListener("change", (event) => {
-    state.showcaseId = event.target.value;
-    renderShowcase();
-  });
   $("langToggle").addEventListener("click", () => {
     state.language = state.language === "zh" ? "en" : "zh";
     localStorage.setItem("research-site-language", state.language);
