@@ -393,6 +393,8 @@ section { padding: 36px 0 24px; }
 .pub-expand p { margin: 0; font-size: 15px; }
 .pub-card[aria-expanded="true"] .toggle::after { transform: rotate(180deg); }
 .toggle::after { content: "▾"; margin-left: 6px; transition: transform var(--dur-fast) ease; }
+.experience-group + .experience-group { margin-top: 40px; }
+.experience-group-title { margin: 0 0 14px; color: var(--ink); font-size: 20px; font-weight: 650; letter-spacing: -.02em; }
 .timeline { position: relative; display: grid; gap: 14px; padding-left: 40px; }
 .timeline::before { position: absolute; top: 0; bottom: 0; left: 20px; width: 2px; content: ""; background: var(--hairline); }
 .timeline-item { position: relative; }

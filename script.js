@@ -89,16 +89,56 @@
     }
   };
 
-  const experience = {
+  const experienceGroups = {
     zh: [
-      { logo: "SYSU", org: "中山大学", title: "微电子科学与技术本科生", range: "2024.09 – 2028.06（预计）" },
-      { logo: "LAB", org: "器件可靠性研究", title: "3D NAND 与 FeFET 研究项目", range: "2025.01 – 至今" },
-      { logo: "AWD", org: "科研竞赛", title: "数学建模、集成电路设计与相关竞赛", range: "2025 – 2026" }
+      {
+        title: "学术与专业活动",
+        items: [
+          { logo: "SYSU", org: "中山大学", title: "微电子科学与技术本科生", range: "2024.09 – 2028.06（预计）" },
+          { logo: "IPFA", org: "IEEE IPFA 2026", title: "学术会议参会与论文录用", range: "2026" }
+        ]
+      },
+      {
+        title: "项目经历",
+        items: [
+          { logo: "NAND", org: "器件可靠性研究", title: "商用 3D NAND 极端温区温度补偿非对称性", range: "2025.08 – 至今" },
+          { logo: "EDL", org: "器件可靠性研究", title: "3D NAND 阈值电压分布的机理约束预测与可靠性建模", range: "2025.08 – 2026.05" },
+          { logo: "TCAM", org: "器件可靠性研究", title: "2FeFET TCAM 畴密度离散性与搜索可靠性", range: "2025.01 – 2025.08" }
+        ]
+      },
+      {
+        title: "获奖经历",
+        items: [
+          { logo: "CUMCM", org: "高教杯全国大学生数学建模竞赛（CUMCM）", title: "省部级一等奖 · 队长", range: "2025.09" },
+          { logo: "IC", org: "第十届全国大学生集成电路创新创业大赛", title: "省部级二等奖", range: "2026.08" },
+          { logo: "HSC", org: "华数杯数学建模竞赛", title: "国家级一等奖", range: "2025.08" }
+        ]
+      }
     ],
     en: [
-      { logo: "SYSU", org: "Sun Yat-sen University", title: "B.S. student, Microelectronics Science and Technology", range: "Sep. 2024 – Jun. 2028 (expected)" },
-      { logo: "LAB", org: "Device reliability research", title: "3D NAND and FeFET research projects", range: "Jan. 2025 – Present" },
-      { logo: "AWD", org: "Research competitions", title: "Mathematical modeling and integrated-circuit design", range: "2025 – 2026" }
+      {
+        title: "Academic and professional activities",
+        items: [
+          { logo: "SYSU", org: "Sun Yat-sen University", title: "B.Eng. Candidate, Microelectronics Science and Engineering", range: "Sep. 2024 – Jun. 2028 (Expected)" },
+          { logo: "IPFA", org: "IEEE IPFA 2026", title: "Conference participation · Accepted paper", range: "2026" }
+        ]
+      },
+      {
+        title: "Projects",
+        items: [
+          { logo: "NAND", org: "Device reliability research", title: "Temperature-Compensation Asymmetry at Thermal Extremes in 3D NAND Flash", range: "Aug. 2025 – Present" },
+          { logo: "EDL", org: "Device reliability research", title: "Mechanism-Informed VTH/Sigma Prediction for 3D NAND Flash", range: "Aug. 2025 – May 2026" },
+          { logo: "TCAM", org: "Device reliability research", title: "Domain-Density-Dependent Variability and Search Reliability in 2FeFET TCAM", range: "Jan. 2025 – Aug. 2025" }
+        ]
+      },
+      {
+        title: "Awards",
+        items: [
+          { logo: "CUMCM", org: "2025 China Undergraduate Mathematical Contest in Modeling", title: "Provincial First Prize · Team Leader", range: "2025" },
+          { logo: "IC", org: "10th National Undergraduate Integrated Circuit Innovation & Entrepreneurship Competition", title: "Provincial / Ministerial Second Prize", range: "2026" },
+          { logo: "HSC", org: "2025 Huashu Cup Mathematical Modeling Competition", title: "Third Prize", range: "2025" }
+        ]
+      }
     ]
   };
 
@@ -118,7 +158,7 @@
     $("interestLead").textContent = zh ? "目前，我主要关注这些问题：" : "Currently, I'm interested in the following questions:";
     $("projectsTitle").textContent = "Selected Projects";
     $("publicationsTitle").textContent = "Recent Publications";
-    $("experienceTitle").textContent = "Experience";
+    $("experienceTitle").textContent = zh ? "经历" : "Experience";
     $("footerName").textContent = "© " + new Date().getFullYear() + " " + content[state.language].footerName;
     $("footerEmail").textContent = zh ? "邮箱" : "Email";
     const cvHref = zh ? "assets/ke-yicheng-cv-cn.pdf" : "assets/ke-yicheng-cv-en.pdf";
@@ -195,12 +235,15 @@
   }
 
   function renderExperience() {
-    $("experienceList").innerHTML = experience[state.language].map((item) =>
-      "<div class=\"timeline-item\"><div class=\"timeline-card\"><div class=\"timeline-header\">" +
-      "<div class=\"timeline-logo\">" + escapeHtml(item.logo) + "</div><div class=\"timeline-main\">" +
-      "<div class=\"timeline-top\"><div class=\"timeline-org\">" + escapeHtml(item.org) + "</div></div>" +
-      "<div class=\"timeline-title\">" + escapeHtml(item.title) + "</div>" +
-      "<div class=\"timeline-range\">" + escapeHtml(item.range) + "</div></div></div></div></div>"
+    $("experienceList").innerHTML = experienceGroups[state.language].map((group) =>
+      "<section class=\"experience-group\"><h3 class=\"experience-group-title\">" + escapeHtml(group.title) + "</h3>" +
+      "<div class=\"timeline\">" + group.items.map((item) =>
+        "<div class=\"timeline-item\"><div class=\"timeline-card\"><div class=\"timeline-header\">" +
+        "<div class=\"timeline-logo\">" + escapeHtml(item.logo) + "</div><div class=\"timeline-main\">" +
+        "<div class=\"timeline-top\"><div class=\"timeline-org\">" + escapeHtml(item.org) + "</div></div>" +
+        "<div class=\"timeline-title\">" + escapeHtml(item.title) + "</div>" +
+        "<div class=\"timeline-range\">" + escapeHtml(item.range) + "</div></div></div></div></div>"
+      ).join("") + "</div></section>"
     ).join("");
   }
 
