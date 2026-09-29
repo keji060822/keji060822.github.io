@@ -6,7 +6,7 @@
     <meta name="description" content="柯毅成的科研个人主页：3D NAND、FeFET、极端温度可靠性与器件建模。" />
     <title>柯毅成 — 存储器可靠性</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23e8eef5'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' fill='%23007aff'%3EYK%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260929-poster" />
   </head>
   <body>
     <header>
@@ -40,86 +40,52 @@
 
       <section id="projects">
         <h2 class="section-title" id="projectsTitle">Selected Projects</h2>
-        <div class="showcase-controls">
-          <span id="showcaseLabel">Featured project</span>
-          <span class="showcase-fixed" id="showcaseFixed">EDL · Threshold-voltage prediction</span>
-        </div>
         <article class="card showcase-card" aria-live="polite">
           <div class="showcase-media" id="showcaseMedia">
-            <div class="desktop-stage" id="desktopStage" data-mode="edl">
-              <div class="desktop-menubar">
-                <span class="traffic-lights"><i></i><i></i><i></i></span>
-                <span class="desktop-app-name">Research Desk</span>
-                <span class="desktop-time">09:41</span>
-              </div>
-              <div class="desktop-body">
-                <aside class="desktop-sidebar">
-                  <span class="desktop-avatar">YK</span>
-                  <strong id="desktopProjectCode">EDL</strong>
-                  <span id="desktopProjectType">Journal study</span>
-                  <span class="desktop-sidebar-line"></span>
-                  <span>Overview</span>
-                  <span>Measurements</span>
-                  <span>Mechanism</span>
-                </aside>
-                <div class="desktop-main">
-                  <div class="desktop-window-head">
-                    <span id="desktopWindowTitle">Mean / Sigma model</span>
-                    <span class="window-dot">•••</span>
-                  </div>
-                  <div class="metric-grid">
-                    <div><span>Temperature</span><strong id="desktopTemp">−55 → 125°C</strong></div>
-                    <div><span>Average RMSE</span><strong id="desktopMetric">↓ 66.9%</strong></div>
-                    <div><span>States</span><strong id="desktopStates">P1 — P7</strong></div>
-                  </div>
-                  <div class="chart-panel">
-                    <div class="chart-labels"><span id="desktopChartLabel">ΔVTH / Δσ</span><span id="desktopChartHint">trap · barrier · mobility</span></div>
-                    <svg viewBox="0 0 620 220" role="img" aria-label="EDL mechanism-informed VTH mean and Sigma prediction plot">
-                      <defs>
-                        <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
-                          <stop offset="0%" stop-color="#007aff" stop-opacity=".28" />
-                          <stop offset="100%" stop-color="#007aff" stop-opacity="0" />
-                        </linearGradient>
-                      </defs>
-                      <path class="chart-grid" d="M0 42H620M0 94H620M0 146H620M0 198H620" />
-                      <g class="chart-edl">
-                        <path class="chart-area" d="M0 192 C32 188 34 168 70 168 S106 118 138 124 S170 66 202 89 S241 150 269 132 S301 52 332 75 S370 151 399 110 S432 31 463 59 S493 132 524 118 S564 77 620 42 L620 220 L0 220Z" />
-                        <path class="chart-line" d="M0 192 C32 188 34 168 70 168 S106 118 138 124 S170 66 202 89 S241 150 269 132 S301 52 332 75 S370 151 399 110 S432 31 463 59 S493 132 524 118 S564 77 620 42" />
-                        <path class="chart-line chart-line-second" d="M0 202 C40 200 48 187 81 185 S118 154 148 157 S184 99 213 116 S253 174 282 153 S313 91 344 107 S378 180 408 145 S447 70 476 91 S509 159 542 146 S585 111 620 89" />
-                      </g>
-                      <g class="chart-ted">
-                        <path class="chart-area chart-area-ted" d="M0 187 C38 183 56 162 92 166 S132 121 166 132 S205 93 240 103 S277 83 314 89 S359 75 391 95 S431 123 461 108 S508 104 548 63 S587 51 620 42 L620 220 L0 220Z" />
-                        <path class="chart-line chart-line-ted-on" d="M0 187 C38 183 56 162 92 166 S132 121 166 132 S205 93 240 103 S277 83 314 89 S359 75 391 95 S431 123 461 108 S508 104 548 63 S587 51 620 42" />
-                        <path class="chart-line chart-line-second chart-line-ted-off" d="M0 202 C38 199 58 180 95 184 S130 149 167 158 S207 127 242 139 S282 119 317 130 S359 115 391 133 S431 157 461 149 S506 138 548 108 S588 95 620 84" />
-                        <path class="chart-divider" d="M420 30V210" />
-                      </g>
-                      <g class="chart-tdmr">
-                        <rect class="chart-bar" x="35" y="157" width="52" height="43" rx="5" />
-                        <rect class="chart-bar" x="120" y="130" width="52" height="70" rx="5" />
-                        <rect class="chart-bar" x="205" y="94" width="52" height="106" rx="5" />
-                        <rect class="chart-bar" x="290" y="70" width="52" height="130" rx="5" />
-                        <rect class="chart-bar" x="375" y="49" width="52" height="151" rx="5" />
-                        <rect class="chart-bar" x="460" y="32" width="52" height="168" rx="5" />
-                        <path class="chart-line chart-line-tdmr" d="M61 148 C141 123 227 87 316 62 S478 21 548 18" />
-                        <circle class="chart-dot" cx="61" cy="148" r="6" /><circle class="chart-dot" cx="151" cy="119" r="6" /><circle class="chart-dot" cx="239" cy="84" r="6" /><circle class="chart-dot" cx="329" cy="58" r="6" /><circle class="chart-dot" cx="419" cy="42" r="6" /><circle class="chart-dot" cx="509" cy="26" r="6" />
-                      </g>
-                      <g class="chart-ipfa">
-                        <path class="chart-area chart-area-ipfa" d="M0 187 C45 185 77 171 113 172 S184 150 226 157 L327 157 C363 145 383 118 423 113 S484 88 529 82 S584 57 620 49 L620 220 L0 220Z" />
-                        <path class="chart-line chart-line-ipfa" d="M0 187 C45 185 77 171 113 172 S184 150 226 157 L327 157 C363 145 383 118 423 113 S484 88 529 82 S584 57 620 49" />
-                        <path class="chart-line chart-line-second chart-line-ipfa-second" d="M0 199 C45 198 77 191 113 191 S184 181 226 186 L327 186 C363 175 383 153 423 148 S484 128 529 122 S584 102 620 95" />
-                        <path class="chart-divider chart-divider-ipfa" d="M327 30V210" />
-                      </g>
-                    </svg>
-                    <div class="chart-axis"><span id="desktopAxisLeft">cold</span><span id="desktopAxisMid">program state</span><span id="desktopAxisRight">hot</span></div>
-                  </div>
-                  <div class="desktop-status"><span class="status-pulse"></span><span id="desktopStatus">Model ready · cross-temperature view</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div class="edl-poster" role="group" aria-label="EDL mechanism-informed predictive model poster">
+    <header class="edl-poster-header">
+      <div class="edl-eyebrow" data-zh="IEEE ELECTRON DEVICE LETTERS · 2026" data-en="IEEE ELECTRON DEVICE LETTERS · 2026">IEEE ELECTRON DEVICE LETTERS · 2026</div>
+      <h3 data-zh="极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测模型" data-en="A mechanism-informed predictive model for mean and Sigma of 3D NAND threshold-voltage distributions at extreme temperatures">A mechanism-informed predictive model for mean and Sigma of 3D NAND threshold-voltage distributions at extreme temperatures</h3>
+      <p class="edl-authors" data-zh="柯毅成 · 董明辉 · 蔡琳琳 · 陈旺勇" data-en="Yicheng Ke · Minghui Dong · Linlin Cai · Wangyong Chen">Yicheng Ke · Minghui Dong · Linlin Cai · Wangyong Chen</p>
+      <div class="edl-stat-row">
+        <div class="edl-stat"><span data-zh="温度窗口" data-en="TEMPERATURE WINDOW">TEMPERATURE WINDOW</span><strong>−55 → 125°C</strong></div>
+        <div class="edl-stat"><span data-zh="编程态" data-en="PROGRAM STATES">PROGRAM STATES</span><strong>P1 — P7</strong></div>
+        <div class="edl-stat edl-stat-accent"><span data-zh="极端温区平均预测 RMSE" data-en="EXTREME-REGION AVG. RMSE">EXTREME-REGION AVG. RMSE</span><strong>↓ 66.9%</strong></div>
+      </div>
+    </header>
+    <div class="edl-poster-grid">
+      <section class="edl-poster-panel edl-poster-figure">
+        <div class="edl-panel-kicker" data-zh="01 · 跨温度预测" data-en="01 · CROSS-TEMPERATURE PREDICTION">01 · CROSS-TEMPERATURE PREDICTION</div>
+        <h4 data-zh="受限窗口拟合与留出区域外推" data-en="Restricted-window fitting and held-out extrapolation">Restricted-window fitting and held-out extrapolation</h4>
+        <img src="assets/edl-fig1.png" alt="EDL restricted-window fitting and extrapolation plots" />
+        <p class="edl-caption" data-zh="HPLR / LPHR 轨迹下，模型同时拟合 ΔVTH 与 Δσ，并向未参与拟合的极端温区外推。" data-en="Under HPLR and LPHR trajectories, the model fits both ΔVTH and Δσ, then extrapolates into held-out extreme-temperature regions.">Under HPLR and LPHR trajectories, the model fits both ΔVTH and Δσ, then extrapolates into held-out extreme-temperature regions.</p>
+      </section>
+      <section class="edl-poster-panel edl-poster-mechanism">
+        <div class="edl-panel-kicker" data-zh="02 · 机理约束分解" data-en="02 · MECHANISM-INFORMED DECOMPOSITION">02 · MECHANISM-INFORMED DECOMPOSITION</div>
+        <h4 data-zh="三个相互耦合的温度响应项" data-en="Three coupled temperature-response terms">Three coupled temperature-response terms</h4>
+        <div class="edl-mechanism-item trap"><b>TRAP RESPONSE</b><strong data-zh="陷阱响应" data-en="Charge loss & sigma broadening">Charge loss & sigma broadening</strong><span data-zh="状态依赖的俘获动力学" data-en="State-dependent trap kinetics">State-dependent trap kinetics</span></div>
+        <div class="edl-mechanism-item barrier"><b>BARRIER MODULATION</b><strong data-zh="晶界势垒调制" data-en="Grain-boundary barrier">Grain-boundary barrier</strong><span data-zh="主导 VTH 均值预测" data-en="Dominates VTH mean prediction">Dominates VTH mean prediction</span></div>
+        <div class="edl-mechanism-item mobility"><b>MOBILITY KERNEL</b><strong data-zh="沟道迁移率核" data-en="Temperature-dependent transport">Temperature-dependent transport</strong><span data-zh="势垒调制的沟道输运" data-en="Barrier-modulated channel mobility">Barrier-modulated channel mobility</span></div>
+        <div class="edl-equation"><b data-zh="联合描述符预测" data-en="JOINT DESCRIPTOR PREDICTION">JOINT DESCRIPTOR PREDICTION</b><code>VTH(T,P) = Vref + ΔVtrap + ΔVb + ΔVμ</code><code>σTH(T,P) = σref + Δσtrap + Δσb + Δσμ</code><span data-zh="均值与 Sigma 由同一组物理项共同约束。" data-en="Mean and Sigma are constrained by the same physical terms.">Mean and Sigma are constrained by the same physical terms.</span></div>
+      </section>
+      <section class="edl-poster-panel edl-poster-results">
+        <div class="edl-panel-kicker" data-zh="03 · 结果" data-en="03 · RESULTS">03 · RESULTS</div>
+        <h4 data-zh="与经验模型的预测区域 RMSE 对比" data-en="Prediction-region RMSE versus empirical models">Prediction-region RMSE versus empirical models</h4>
+        <img src="assets/edl-fig3.png" alt="EDL prediction-region RMSE comparison" />
+        <ul>
+          <li data-zh="商用 232 层 TLC 电荷俘获 3D NAND" data-en="Commercial 232-layer TLC charge-trap 3D NAND">Commercial 232-layer TLC charge-trap 3D NAND</li>
+          <li data-zh="HPLR / LPHR 两条温度轨迹" data-en="HPLR and LPHR temperature trajectories">HPLR and LPHR temperature trajectories</li>
+          <li data-zh="势垒项主导 ΔVTH，陷阱项主导 Δσ" data-en="Barrier dominates ΔVTH; trap dominates Δσ">Barrier dominates ΔVTH; trap dominates Δσ</li>
+        </ul>
+        <div class="edl-result-banner"><strong>66.9%</strong><span data-zh="极端温区平均预测 RMSE 降低" data-en="lower average prediction RMSE in extreme regions">lower average prediction RMSE in extreme regions</span></div>
+      </section>
+    </div>
+    <footer class="edl-poster-footer" data-zh="商用 232 层 TLC · P1–P7 · 机制可解释的分布级跨温度预测" data-en="Commercial 232-layer TLC · P1–P7 · Interpretable distribution-level cross-temperature prediction">Commercial 232-layer TLC · P1–P7 · Interpretable distribution-level cross-temperature prediction</footer>
+  </div>
+</div>
           <div class="card-body">
-            <h3><span id="showcaseTitle">3D NAND threshold-voltage prediction</span> — <span id="showcaseYear">2026</span></h3>
-            <p class="muted" id="showcaseCopy">A mechanism-constrained model jointly predicts VTH mean and Sigma across extreme temperatures.</p>
+            <h3><span id="showcaseTitle">极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测</span> — <span id="showcaseYear">2026</span></h3>
+            <p class="muted" id="showcaseCopy">面向商用 232 层 TLC 3D NAND，联合预测 P1–P7 的 VTH 均值与 Sigma，覆盖 HPLR 和 LPHR 温度轨迹。</p>
             <ul id="showcaseBullets"></ul>
             <div class="links" id="showcaseLinks"></div>
             <div class="tags" id="showcaseTags"></div>
@@ -145,8 +111,8 @@
       </div>
     </footer>
 
-    <script src="content.js"></script>
-    <script src="papers.js"></script>
-    <script src="script.js"></script>
+    <script src="content.js?v=20260929-poster"></script>
+    <script src="papers.js?v=20260929-poster"></script>
+    <script src="script.js?v=20260929-poster"></script>
   </body>
 </html>

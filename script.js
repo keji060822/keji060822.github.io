@@ -179,21 +179,9 @@
   function renderShowcase() {
     const meta = showcaseMeta[state.showcaseId];
     const zh = state.language === "zh";
-    $("desktopStage").dataset.mode = meta.visual;
-    $("desktopChartLabel").textContent = meta.chartLabel[state.language];
-    $("desktopAxisLeft").textContent = meta.axes[state.language][0];
-    $("desktopAxisMid").textContent = meta.axes[state.language][1];
-    $("desktopAxisRight").textContent = meta.axes[state.language][2];
-    $("showcaseLabel").textContent = zh ? "当前展示项目" : "Featured project";
-    $("showcaseFixed").textContent = zh ? "EDL · 阈值电压分布预测" : "EDL · Threshold-voltage prediction";
-    $("desktopProjectCode").textContent = meta.code;
-    $("desktopProjectType").textContent = meta.type[state.language];
-    $("desktopWindowTitle").textContent = meta.windowTitle[state.language];
-    $("desktopTemp").textContent = meta.temperature;
-    $("desktopMetric").textContent = meta.metric;
-    $("desktopStates").textContent = meta.states;
-    $("desktopChartHint").textContent = meta.hint[state.language];
-    $("desktopStatus").textContent = meta.status[state.language];
+    document.querySelectorAll("[data-zh][data-en]").forEach((element) => {
+      element.textContent = element.dataset[zh ? "zh" : "en"];
+    });
     $("showcaseTitle").textContent = meta.title[state.language];
     $("showcaseYear").textContent = meta.year;
     $("showcaseCopy").textContent = meta.copy[state.language];
