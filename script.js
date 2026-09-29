@@ -148,13 +148,13 @@
     NAND: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="7" width="16" height="18" rx="2.5" fill="#2f80ed"/><rect x="12" y="11" width="8" height="10" rx="1.3" fill="#dcecff"/><path d="M4.5 11h3M4.5 16h3M4.5 21h3M24.5 11h3M24.5 16h3M24.5 21h3M12 4v3M16 4v3M20 4v3M12 25v3M16 25v3M20 25v3" stroke="#2f80ed" stroke-width="1.8" stroke-linecap="round"/><path d="M14 14h4M14 17h4" stroke="#2f80ed" stroke-width="1.2" stroke-linecap="round"/></svg>`,
     EDL: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 4.5h11l5 5v18H8z" fill="#fff" stroke="#2864c7" stroke-width="1.5"/><path d="M19 4.5v5h5" fill="none" stroke="#2864c7" stroke-width="1.5"/><path d="M11.5 22.5 15 18l3 2.1 4.1-5" fill="none" stroke="#e24a5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 11.5h6.2M11.5 14.5h8.5" stroke="#2864c7" stroke-width="1.4" stroke-linecap="round"/></svg>`,
     TCAM: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 7h11v11H7zM7 21h11v4H7zM21 7h4v11h-4z" fill="#21a366"/><path d="M10 10h5M10 14h5M21 22h3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="21.5" cy="21" r="5" fill="#fff" stroke="#21a366" stroke-width="1.7"/><path d="m25.3 24.8 3 3" stroke="#21a366" stroke-width="1.8" stroke-linecap="round"/></svg>`,
-    IC: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="8" width="16" height="16" rx="2.5" fill="#df4e63"/><rect x="12" y="12" width="8" height="8" rx="1" fill="#fff0f2"/><path d="M4.5 12h3M4.5 16h3M4.5 20h3M24.5 12h3M24.5 16h3M24.5 20h3M12 4.5v3M16 4.5v3M20 4.5v3M12 24.5v3M16 24.5v3M20 24.5v3" stroke="#df4e63" stroke-width="1.8" stroke-linecap="round"/><path d="M14 16h4M16 14v4" stroke="#df4e63" stroke-width="1.4" stroke-linecap="round"/></svg>`
   };
 
   const experienceLogoAssets = {
     SYSU: "assets/logos/sysu.png",
     IPFA: "assets/logos/ipfa.png",
     CUMCM: "assets/logos/cumcm.png",
+    IC: "assets/logos/ic-competition.png",
     HSC: "assets/logos/huashu-cup.png"
   };
 

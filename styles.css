@@ -483,7 +483,7 @@ section { padding: 36px 0 24px; }
 .timeline-logo-edl { border-color: rgba(40, 100, 199, .2); background: #f4f7ff; }
 .timeline-logo-tcam { border-color: rgba(33, 163, 102, .22); background: #f1fbf6; }
 .timeline-logo-cumcm { border-color: rgba(246, 118, 0, .24); background: #fff7eb; }
-.timeline-logo-ic { border-color: rgba(223, 78, 99, .2); background: #fff5f6; }
+.timeline-logo-ic { border-color: rgba(0, 99, 224, .2); background: #fff; }
 .timeline-logo-hsc { border-color: rgba(51, 190, 215, .26); background: #effcff; }
 .timeline-main { min-width: 0; flex: 1 1; }
 .timeline-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
