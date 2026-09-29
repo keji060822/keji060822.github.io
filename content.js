@@ -71,9 +71,9 @@ window.siteContent = {
       { date: "2025.08", title: "开始 3D NAND 跨温研究", copy: "从多温度点 Vref 扫描和 P1–P7 阈值分布重构开始，持续追踪补偿策略与本征响应的失配。" }
     ],
     socials: [
-      { label: "Email", href: "mailto:keych@mail2.sysu.edu.cn" },
-      { label: "CV", href: "assets/ke-yicheng-cv-cn.pdf" },
-      { label: "Research focus", href: "#research" }
+      { id: "arxiv", label: "arXiv", description: "作者检索", href: "https://arxiv.org/search/?query=Yicheng+Ke&searchtype=author" },
+      { id: "email", label: "Email", description: "keych@mail2.sysu.edu.cn", href: "mailto:keych@mail2.sysu.edu.cn" },
+      { id: "scholar", label: "Google Scholar", description: "作者检索", href: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yicheng+Ke+Sun+Yat-sen+University" }
     ]
   },
   en: {
@@ -144,9 +144,9 @@ window.siteContent = {
       { date: "2025.08", title: "Begin cross-temperature 3D NAND research", copy: "Start with multi-temperature Vref scans and P1–P7 threshold-distribution reconstruction, then follow the mismatch between compensation and intrinsic response." }
     ],
     socials: [
-      { label: "Email", href: "mailto:keych@mail2.sysu.edu.cn" },
-      { label: "CV", href: "assets/ke-yicheng-cv-cn.pdf" },
-      { label: "Research focus", href: "#research" }
+      { id: "arxiv", label: "arXiv", description: "Author search", href: "https://arxiv.org/search/?query=Yicheng+Ke&searchtype=author" },
+      { id: "email", label: "Email", description: "keych@mail2.sysu.edu.cn", href: "mailto:keych@mail2.sysu.edu.cn" },
+      { id: "scholar", label: "Google Scholar", description: "Author search", href: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yicheng+Ke+Sun+Yat-sen+University" }
     ]
   }
 };

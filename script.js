@@ -158,6 +158,12 @@
     HSC: "assets/logos/huashu-cup.png"
   };
 
+  const profileIcons = {
+    arxiv: "assets/icons/arxiv.svg",
+    email: "assets/icons/email.svg",
+    scholar: "assets/icons/google-scholar.svg"
+  };
+
   function renderExperienceLogo(code) {
     const key = String(code || "").toUpperCase();
     const className = key.toLowerCase().replace(/[^a-z0-9-]/g, "");
@@ -193,6 +199,20 @@
     $("footerCv").href = cvHref;
     document.title = zh ? "柯毅成 — 存储器可靠性" : "Yicheng Ke — Memory Reliability";
     document.documentElement.lang = zh ? "zh-CN" : "en";
+  }
+
+  function renderProfileLinks() {
+    const links = content[state.language].socials || [];
+    $("profileLinks").innerHTML = links.map((link) => {
+      const external = /^https?:\/\//i.test(link.href);
+      const icon = profileIcons[link.id] || profileIcons.email;
+      return "<a class=\"profile-link profile-link-" + escapeHtml(link.id || "link") + "\" href=\"" + escapeHtml(link.href) + "\"" +
+        (external ? " target=\"_blank\" rel=\"noopener noreferrer\"" : "") +
+        " title=\"" + escapeHtml(link.description || link.label) + "\">" +
+        "<span class=\"profile-link-icon\"><img src=\"" + escapeHtml(icon) + "\" alt=\"\" decoding=\"async\"></span>" +
+        "<span class=\"profile-link-copy\"><strong>" + escapeHtml(link.label) + "</strong><small>" + escapeHtml(link.description || "") + "</small></span>" +
+        "</a>";
+    }).join("");
   }
 
   function renderQuestions() {
@@ -267,6 +287,7 @@
 
   function renderAll() {
     renderHero();
+    renderProfileLinks();
     renderQuestions();
     renderShowcase();
     renderPublications();
