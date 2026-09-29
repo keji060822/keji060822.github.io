@@ -145,14 +145,17 @@
   };
 
   const experienceIcons = {
-    SYSU: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5 27 6.4v7.8c0 6.9-4.4 12.8-11 15.3C9.4 27 5 21.1 5 14.2V6.4L16 2.5Z" fill="#fff" stroke="#c92b35" stroke-width="1.5"/><path d="M10.1 11.1c2.7-2.1 8.4-1.9 10.6.5 1.5 1.7.8 3.5-1.1 4.3-2.1.9-5.5-.1-7 1.2-1.2 1.1-.7 2.7.6 3.6-2.4-1-4-2.8-4-4.9 0-1.8.9-3.4 2.6-4.7Z" fill="#d9363e"/><path d="M21.8 10.4c2.3 1.5 3.7 3.5 3.7 5.7 0 3.2-3.2 6.1-7.8 7.1 2-1.1 3.1-2.7 2.7-4.2-.4-1.5-2.1-2.3-3.8-2.8 2.8.3 5.1-.5 5.6-2.2.4-1.2-.1-2.5-1.4-3.6Z" fill="#18864b"/></svg>`,
-    IPFA: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="16" r="3.7" fill="#7856d8"/><path d="M9.3 16a6.7 6.7 0 0 1 13.4 0M5.8 16a10.2 10.2 0 0 1 20.4 0M12.3 7.1a10.2 10.2 0 0 1 7.4 0M12.3 24.9a10.2 10.2 0 0 0 7.4 0" fill="none" stroke="#7856d8" stroke-width="1.7" stroke-linecap="round"/><path d="M16 4.8v3.1M16 24.1v3.1" stroke="#ae94f3" stroke-width="1.7" stroke-linecap="round"/></svg>`,
     NAND: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="7" width="16" height="18" rx="2.5" fill="#2f80ed"/><rect x="12" y="11" width="8" height="10" rx="1.3" fill="#dcecff"/><path d="M4.5 11h3M4.5 16h3M4.5 21h3M24.5 11h3M24.5 16h3M24.5 21h3M12 4v3M16 4v3M20 4v3M12 25v3M16 25v3M20 25v3" stroke="#2f80ed" stroke-width="1.8" stroke-linecap="round"/><path d="M14 14h4M14 17h4" stroke="#2f80ed" stroke-width="1.2" stroke-linecap="round"/></svg>`,
     EDL: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8 4.5h11l5 5v18H8z" fill="#fff" stroke="#2864c7" stroke-width="1.5"/><path d="M19 4.5v5h5" fill="none" stroke="#2864c7" stroke-width="1.5"/><path d="M11.5 22.5 15 18l3 2.1 4.1-5" fill="none" stroke="#e24a5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 11.5h6.2M11.5 14.5h8.5" stroke="#2864c7" stroke-width="1.4" stroke-linecap="round"/></svg>`,
     TCAM: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 7h11v11H7zM7 21h11v4H7zM21 7h4v11h-4z" fill="#21a366"/><path d="M10 10h5M10 14h5M21 22h3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><circle cx="21.5" cy="21" r="5" fill="#fff" stroke="#21a366" stroke-width="1.7"/><path d="m25.3 24.8 3 3" stroke="#21a366" stroke-width="1.8" stroke-linecap="round"/></svg>`,
-    CUMCM: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 7h14v3.8a7 7 0 0 1-5 6.7v3.2h3.5v3H10.5v-3H14v-3.2a7 7 0 0 1-5-6.7V7Z" fill="#f4a62a"/><path d="M9 10H5.5v1.2a5.4 5.4 0 0 0 5.2 5.4M23 10h3.5v1.2a5.4 5.4 0 0 1-5.2 5.4" fill="none" stroke="#d17b0b" stroke-width="1.7" stroke-linecap="round"/><path d="M16 4.2v2.2M12.7 4.9l1 1.8M19.3 4.9l-1 1.8" stroke="#f4a62a" stroke-width="1.5" stroke-linecap="round"/></svg>`,
-    IC: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="8" width="16" height="16" rx="2.5" fill="#df4e63"/><rect x="12" y="12" width="8" height="8" rx="1" fill="#fff0f2"/><path d="M4.5 12h3M4.5 16h3M4.5 20h3M24.5 12h3M24.5 16h3M24.5 20h3M12 4.5v3M16 4.5v3M20 4.5v3M12 24.5v3M16 24.5v3M20 24.5v3" stroke="#df4e63" stroke-width="1.8" stroke-linecap="round"/><path d="M14 16h4M16 14v4" stroke="#df4e63" stroke-width="1.4" stroke-linecap="round"/></svg>`,
-    HSC: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="16" cy="12" r="7" fill="#f3bd32"/><path d="M11 17.5 9.5 28l6.5-3.2 6.5 3.2L21 17.5" fill="#f8d86b" stroke="#d99a13" stroke-width="1.5" stroke-linejoin="round"/><path d="m16 8.2 1.1 2.2 2.4.4-1.7 1.7.4 2.4-2.2-1.1-2.2 1.1.4-2.4-1.7-1.7 2.4-.4L16 8.2Z" fill="#fff"/></svg>`
+    IC: `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="8" y="8" width="16" height="16" rx="2.5" fill="#df4e63"/><rect x="12" y="12" width="8" height="8" rx="1" fill="#fff0f2"/><path d="M4.5 12h3M4.5 16h3M4.5 20h3M24.5 12h3M24.5 16h3M24.5 20h3M12 4.5v3M16 4.5v3M20 4.5v3M12 24.5v3M16 24.5v3M20 24.5v3" stroke="#df4e63" stroke-width="1.8" stroke-linecap="round"/><path d="M14 16h4M16 14v4" stroke="#df4e63" stroke-width="1.4" stroke-linecap="round"/></svg>`
+  };
+
+  const experienceLogoAssets = {
+    SYSU: "assets/logos/sysu.png",
+    IPFA: "assets/logos/ipfa.png",
+    CUMCM: "assets/logos/cumcm.png",
+    HSC: "assets/logos/huashu-cup.png"
   };
 
   function renderExperienceLogo(code) {
@@ -160,7 +163,9 @@
     const className = key.toLowerCase().replace(/[^a-z0-9-]/g, "");
     return {
       className,
-      markup: experienceIcons[key] || "<span class=\"timeline-logo-fallback\">" + escapeHtml(key.slice(0, 4)) + "</span>"
+      markup: experienceLogoAssets[key]
+        ? "<img src=\"" + escapeHtml(experienceLogoAssets[key]) + "\" alt=\"\" decoding=\"async\">"
+        : (experienceIcons[key] || "<span class=\"timeline-logo-fallback\">" + escapeHtml(key.slice(0, 4)) + "</span>")
     };
   }
 
