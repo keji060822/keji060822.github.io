@@ -116,9 +116,7 @@ header {
 }
 .nav-btn,
 .language-button,
-.theme-button,
-.text-button,
-.icon-button {
+.text-button {
   border: 1px solid var(--hairline);
   border-radius: 999px;
   color: var(--ink);
@@ -131,22 +129,13 @@ header {
 .language-button { padding: 8px 14px; font-size: 14px; }
 .nav-btn:hover,
 .language-button:hover,
-.theme-button:hover,
 .text-button:hover,
-.icon-button:hover {
+.text-button:hover {
   color: var(--ink);
   background: #fff;
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, .06);
 }
-.theme-button,
-.icon-button {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  font-size: 14px;
-}
-
 .hero { padding: 64px 0 28px; }
 .hero-flex {
   display: grid;

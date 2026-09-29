@@ -3,8 +3,7 @@
   const paperId = query.get("id");
   const paper = window.paperDetails && window.paperDetails[paperId];
   const state = {
-    language: localStorage.getItem("research-site-language") || "zh",
-    theme: localStorage.getItem("research-site-theme") || "light"
+    language: localStorage.getItem("research-site-language") || "zh"
   };
 
   const $ = (id) => document.getElementById(id);
@@ -58,13 +57,6 @@
     }
   };
 
-  function setTheme(theme) {
-    state.theme = theme;
-    document.documentElement.dataset.theme = theme;
-    localStorage.setItem("research-site-theme", theme);
-    $("themeToggle").setAttribute("aria-label", theme === "light" ? "Switch to dark theme" : "Switch to light theme");
-  }
-
   function showNotFound() {
     $("paperPage").hidden = true;
     $("paperNotFound").hidden = false;
@@ -73,7 +65,6 @@
     $("paperNotFound").querySelector("p:not(.paper-kicker)").textContent = copy.notFoundCopy;
     $("paperNotFound").querySelector("a").innerHTML = copy.notFoundBack + " <span>↗</span>";
     $("langToggle").textContent = state.language === "zh" ? "EN" : "中";
-    setTheme(state.theme);
   }
 
   function render() {
@@ -112,7 +103,6 @@
     $("paperFrame").src = paper.pdf;
     $("langToggle").textContent = state.language === "zh" ? "EN" : "中";
     $("langToggle").setAttribute("aria-label", state.language === "zh" ? "Switch to English" : "切换到中文");
-    setTheme(state.theme);
   }
 
   $("langToggle").addEventListener("click", () => {
@@ -120,10 +110,6 @@
     localStorage.setItem("research-site-language", state.language);
     if (paper) render();
     else showNotFound();
-  });
-
-  $("themeToggle").addEventListener("click", () => {
-    setTheme(state.theme === "light" ? "dark" : "light");
   });
 
   $("paperFrame").addEventListener("load", () => {
