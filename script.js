@@ -27,11 +27,11 @@
       states: "P1 — P7",
       hint: { zh: "陷阱 · 势垒 · 迁移率", en: "trap · barrier · mobility" },
       status: { zh: "HPLR / LPHR · 模型就绪", en: "HPLR / LPHR · model ready" },
-      title: { zh: "极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测", en: "A Mechanism-Informed Predictive Model for Mean and Sigma of 3D NAND Threshold-Voltage Distributions at Extreme Temperatures" },
+      title: { zh: "极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测", en: "Predicting 3D NAND Reliability Across Extreme Temperatures" },
       year: "2026",
-      copy: { zh: "面向商用 232 层 TLC 3D NAND，联合预测 P1–P7 的 VTH 均值与 Sigma，覆盖高温编程/低温读取（HPLR）和低温编程/高温读取（LPHR）轨迹。", en: "For commercial 232-layer TLC 3D NAND, the model jointly predicts P1–P7 VTH mean and Sigma across high-temperature-program/low-temperature-read (HPLR) and low-temperature-program/high-temperature-read (LPHR) trajectories." },
+      copy: { zh: "面向商用 232 层 TLC 3D NAND，联合预测 P1–P7 的 VTH 均值与 Sigma，覆盖高温编程/低温读取（HPLR）和低温编程/高温读取（LPHR）轨迹。", en: "A mechanism-informed model connects trap, barrier, and mobility physics to threshold-voltage mean and sigma from −55°C to 125°C." },
       bullets: { zh: ["显式分解并耦合陷阱、晶界势垒与沟道迁移率三项贡献。", "势垒项主导 VTH 均值、陷阱项主导 Sigma；极端温区平均预测 RMSE 降低 66.9%。"], en: ["Explicitly decomposes and couples trap, grain-boundary barrier, and channel-mobility contributions.", "The barrier term dominates VTH mean prediction while the trap term dominates Sigma; average extreme-region prediction RMSE drops by 66.9%."] },
-      tags: { zh: ["232 层 TLC", "HPLR / LPHR", "Trap · Barrier · Mobility"], en: ["232-layer TLC", "HPLR / LPHR", "Trap · Barrier · Mobility"] }
+      tags: { zh: ["232 层 TLC", "HPLR / LPHR", "Trap · Barrier · Mobility"], en: ["3D NAND", "Extreme temperatures", "Mechanism-informed modeling"] }
     },
     "nand-compensation": {
       code: "TED",
@@ -178,16 +178,11 @@
 
   function renderShowcase() {
     const meta = showcaseMeta[state.showcaseId];
-    const zh = state.language === "zh";
-    document.querySelectorAll("[data-zh][data-en]").forEach((element) => {
-      element.textContent = element.dataset[zh ? "zh" : "en"];
-    });
-    $("showcaseTitle").textContent = meta.title[state.language];
-    $("showcaseYear").textContent = meta.year;
-    $("showcaseCopy").textContent = meta.copy[state.language];
-    $("showcaseBullets").innerHTML = meta.bullets[state.language].map((item) => "<li>" + escapeHtml(item) + "</li>").join("");
-    $("showcaseTags").innerHTML = meta.tags[state.language].map((item) => "<span class=\"tag\">" + escapeHtml(item) + "</span>").join("");
-    $("showcaseLinks").innerHTML = linkMarkup(zh ? "论文详情" : "Paper", "paper.html?id=" + state.showcaseId, true) +
+    $("showcaseTitle").textContent = meta.title.en;
+    $("showcaseCopy").textContent = meta.copy.en;
+    $("showcaseBullets").innerHTML = meta.bullets.en.map((item) => "<li>" + escapeHtml(item) + "</li>").join("");
+    $("showcaseTags").innerHTML = meta.tags.en.map((item) => "<span class=\"tag\">" + escapeHtml(item) + "</span>").join("");
+    $("showcaseLinks").innerHTML = linkMarkup("Read paper", "paper.html?id=" + state.showcaseId, true) +
       linkMarkup("DOI / PDF", papers[state.showcaseId].doi);
   }
 

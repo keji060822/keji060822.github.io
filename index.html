@@ -6,7 +6,7 @@
     <meta name="description" content="柯毅成的科研个人主页：3D NAND、FeFET、极端温度可靠性与器件建模。" />
     <title>柯毅成 — 存储器可靠性</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23e8eef5'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='22' fill='%23007aff'%3EYK%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="styles.css?v=20260929-poster" />
+    <link rel="stylesheet" href="styles.css?v=20260929-firstpage" />
   </head>
   <body>
     <header>
@@ -42,50 +42,21 @@
         <h2 class="section-title" id="projectsTitle">Selected Projects</h2>
         <article class="card showcase-card" aria-live="polite">
           <div class="showcase-media" id="showcaseMedia">
-  <div class="edl-poster" role="group" aria-label="EDL mechanism-informed predictive model poster">
-    <header class="edl-poster-header">
-      <div class="edl-eyebrow" data-zh="IEEE ELECTRON DEVICE LETTERS · 2026" data-en="IEEE ELECTRON DEVICE LETTERS · 2026">IEEE ELECTRON DEVICE LETTERS · 2026</div>
-      <h3 data-zh="极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测模型" data-en="A mechanism-informed predictive model for mean and Sigma of 3D NAND threshold-voltage distributions at extreme temperatures">A mechanism-informed predictive model for mean and Sigma of 3D NAND threshold-voltage distributions at extreme temperatures</h3>
-      <p class="edl-authors" data-zh="柯毅成 · 董明辉 · 蔡琳琳 · 陈旺勇" data-en="Yicheng Ke · Minghui Dong · Linlin Cai · Wangyong Chen">Yicheng Ke · Minghui Dong · Linlin Cai · Wangyong Chen</p>
-      <div class="edl-stat-row">
-        <div class="edl-stat"><span data-zh="温度窗口" data-en="TEMPERATURE WINDOW">TEMPERATURE WINDOW</span><strong>−55 → 125°C</strong></div>
-        <div class="edl-stat"><span data-zh="编程态" data-en="PROGRAM STATES">PROGRAM STATES</span><strong>P1 — P7</strong></div>
-        <div class="edl-stat edl-stat-accent"><span data-zh="极端温区平均预测 RMSE" data-en="EXTREME-REGION AVG. RMSE">EXTREME-REGION AVG. RMSE</span><strong>↓ 66.9%</strong></div>
-      </div>
-    </header>
-    <div class="edl-poster-grid">
-      <section class="edl-poster-panel edl-poster-figure">
-        <div class="edl-panel-kicker" data-zh="01 · 跨温度预测" data-en="01 · CROSS-TEMPERATURE PREDICTION">01 · CROSS-TEMPERATURE PREDICTION</div>
-        <h4 data-zh="受限窗口拟合与留出区域外推" data-en="Restricted-window fitting and held-out extrapolation">Restricted-window fitting and held-out extrapolation</h4>
-        <img src="assets/edl-fig1.png" alt="EDL restricted-window fitting and extrapolation plots" />
-        <p class="edl-caption" data-zh="HPLR / LPHR 轨迹下，模型同时拟合 ΔVTH 与 Δσ，并向未参与拟合的极端温区外推。" data-en="Under HPLR and LPHR trajectories, the model fits both ΔVTH and Δσ, then extrapolates into held-out extreme-temperature regions.">Under HPLR and LPHR trajectories, the model fits both ΔVTH and Δσ, then extrapolates into held-out extreme-temperature regions.</p>
-      </section>
-      <section class="edl-poster-panel edl-poster-mechanism">
-        <div class="edl-panel-kicker" data-zh="02 · 机理约束分解" data-en="02 · MECHANISM-INFORMED DECOMPOSITION">02 · MECHANISM-INFORMED DECOMPOSITION</div>
-        <h4 data-zh="三个相互耦合的温度响应项" data-en="Three coupled temperature-response terms">Three coupled temperature-response terms</h4>
-        <div class="edl-mechanism-item trap"><b>TRAP RESPONSE</b><strong data-zh="陷阱响应" data-en="Charge loss & sigma broadening">Charge loss & sigma broadening</strong><span data-zh="状态依赖的俘获动力学" data-en="State-dependent trap kinetics">State-dependent trap kinetics</span></div>
-        <div class="edl-mechanism-item barrier"><b>BARRIER MODULATION</b><strong data-zh="晶界势垒调制" data-en="Grain-boundary barrier">Grain-boundary barrier</strong><span data-zh="主导 VTH 均值预测" data-en="Dominates VTH mean prediction">Dominates VTH mean prediction</span></div>
-        <div class="edl-mechanism-item mobility"><b>MOBILITY KERNEL</b><strong data-zh="沟道迁移率核" data-en="Temperature-dependent transport">Temperature-dependent transport</strong><span data-zh="势垒调制的沟道输运" data-en="Barrier-modulated channel mobility">Barrier-modulated channel mobility</span></div>
-        <div class="edl-equation"><b data-zh="联合描述符预测" data-en="JOINT DESCRIPTOR PREDICTION">JOINT DESCRIPTOR PREDICTION</b><code>VTH(T,P) = Vref + ΔVtrap + ΔVb + ΔVμ</code><code>σTH(T,P) = σref + Δσtrap + Δσb + Δσμ</code><span data-zh="均值与 Sigma 由同一组物理项共同约束。" data-en="Mean and Sigma are constrained by the same physical terms.">Mean and Sigma are constrained by the same physical terms.</span></div>
-      </section>
-      <section class="edl-poster-panel edl-poster-results">
-        <div class="edl-panel-kicker" data-zh="03 · 结果" data-en="03 · RESULTS">03 · RESULTS</div>
-        <h4 data-zh="与经验模型的预测区域 RMSE 对比" data-en="Prediction-region RMSE versus empirical models">Prediction-region RMSE versus empirical models</h4>
-        <img src="assets/edl-fig3.png" alt="EDL prediction-region RMSE comparison" />
-        <ul>
-          <li data-zh="商用 232 层 TLC 电荷俘获 3D NAND" data-en="Commercial 232-layer TLC charge-trap 3D NAND">Commercial 232-layer TLC charge-trap 3D NAND</li>
-          <li data-zh="HPLR / LPHR 两条温度轨迹" data-en="HPLR and LPHR temperature trajectories">HPLR and LPHR temperature trajectories</li>
-          <li data-zh="势垒项主导 ΔVTH，陷阱项主导 Δσ" data-en="Barrier dominates ΔVTH; trap dominates Δσ">Barrier dominates ΔVTH; trap dominates Δσ</li>
-        </ul>
-        <div class="edl-result-banner"><strong>66.9%</strong><span data-zh="极端温区平均预测 RMSE 降低" data-en="lower average prediction RMSE in extreme regions">lower average prediction RMSE in extreme regions</span></div>
-      </section>
-    </div>
-    <footer class="edl-poster-footer" data-zh="商用 232 层 TLC · P1–P7 · 机制可解释的分布级跨温度预测" data-en="Commercial 232-layer TLC · P1–P7 · Interpretable distribution-level cross-temperature prediction">Commercial 232-layer TLC · P1–P7 · Interpretable distribution-level cross-temperature prediction</footer>
-  </div>
-</div>
+            <div class="paper-preview" role="group" aria-label="First page preview of the EDL paper">
+              <div class="paper-preview-bar">
+                <div class="paper-preview-lights" aria-hidden="true"><i></i><i></i><i></i></div>
+                <span>IEEE ELECTRON DEVICE LETTERS · FEATURED PAPER</span>
+                <span class="paper-preview-page">FIRST PAGE · 2026</span>
+              </div>
+              <div class="paper-preview-stage">
+                <img src="assets/edl-cover.png" alt="Title and abstract preview from the first page of the EDL paper" />
+              </div>
+            </div>
+          </div>
           <div class="card-body">
-            <h3><span id="showcaseTitle">极端温度下 3D NAND 阈值电压分布均值与 Sigma 的机理约束预测</span> — <span id="showcaseYear">2026</span></h3>
-            <p class="muted" id="showcaseCopy">面向商用 232 层 TLC 3D NAND，联合预测 P1–P7 的 VTH 均值与 Sigma，覆盖 HPLR 和 LPHR 温度轨迹。</p>
+            <p class="showcase-kicker">Featured paper · IEEE Electron Device Letters · 2026</p>
+            <h3><span id="showcaseTitle">Predicting 3D NAND Reliability Across Extreme Temperatures</span></h3>
+            <p class="muted" id="showcaseCopy">A mechanism-informed model connects trap, barrier, and mobility physics to threshold-voltage mean and sigma from −55°C to 125°C.</p>
             <ul id="showcaseBullets"></ul>
             <div class="links" id="showcaseLinks"></div>
             <div class="tags" id="showcaseTags"></div>
@@ -111,8 +82,8 @@
       </div>
     </footer>
 
-    <script src="content.js?v=20260929-poster"></script>
-    <script src="papers.js?v=20260929-poster"></script>
-    <script src="script.js?v=20260929-poster"></script>
+    <script src="content.js?v=20260929-firstpage"></script>
+    <script src="papers.js?v=20260929-firstpage"></script>
+    <script src="script.js?v=20260929-firstpage"></script>
   </body>
 </html>
