@@ -73,7 +73,7 @@ window.siteContent = {
     socials: [
       { id: "arxiv", label: "arXiv", description: "作者检索", href: "https://arxiv.org/search/?query=Yicheng+Ke&searchtype=author" },
       { id: "email", label: "Email", description: "keych@mail2.sysu.edu.cn", href: "mailto:keych@mail2.sysu.edu.cn" },
-      { id: "scholar", label: "Google Scholar", description: "作者检索", href: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yicheng+Ke+Sun+Yat-sen+University" }
+      { id: "scholar", label: "Google Scholar", description: "学术主页", href: "https://scholar.google.com/citations?user=aAtGDBwAAAAJ&hl=en" }
     ]
   },
   en: {
@@ -146,7 +146,7 @@ window.siteContent = {
     socials: [
       { id: "arxiv", label: "arXiv", description: "Author search", href: "https://arxiv.org/search/?query=Yicheng+Ke&searchtype=author" },
       { id: "email", label: "Email", description: "keych@mail2.sysu.edu.cn", href: "mailto:keych@mail2.sysu.edu.cn" },
-      { id: "scholar", label: "Google Scholar", description: "Author search", href: "https://scholar.google.com/citations?view_op=search_authors&mauthors=Yicheng+Ke+Sun+Yat-sen+University" }
+      { id: "scholar", label: "Google Scholar", description: "Scholar profile", href: "https://scholar.google.com/citations?user=aAtGDBwAAAAJ&hl=en" }
     ]
   }
 };
